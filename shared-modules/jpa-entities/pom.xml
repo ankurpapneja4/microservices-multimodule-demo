@@ -12,4 +12,17 @@
     <artifactId>jpa-entities</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+        </dependency>
+
+    </dependencies>
 </project>
