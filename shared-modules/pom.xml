@@ -17,6 +17,7 @@
         <module>jpa-entities</module>
         <module>web-api</module>
         <module>mappers</module>
+        <module>clients</module>
     </modules>
 
     <properties>
