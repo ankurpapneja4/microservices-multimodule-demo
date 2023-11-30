@@ -17,6 +17,10 @@
     <version>${revision}</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>microservices</module>
+    </modules>
+
     <properties>
         <revision>1.0.0-SNAPSHOT</revision>
         <java.version>17</java.version>
