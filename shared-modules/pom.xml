@@ -13,6 +13,10 @@
     <artifactId>shared-modules</artifactId>
     <packaging>pom</packaging>
 
+    <properties>
+        <spring-boot.repackaga.skip>true</spring-boot.repackaga.skip>
+    </properties>
+
 
 
 </project>
