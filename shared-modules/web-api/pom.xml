@@ -4,24 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>microservices-multimodule-demo</artifactId>
+        <artifactId>shared-modules</artifactId>
         <version>${revision}</version>
     </parent>
-    <artifactId>shared-modules</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>jpa-entities</module>
-        <module>web-api</module>
-    </modules>
-
-    <properties>
-        <spring-boot.repackaga.skip>true</spring-boot.repackaga.skip>
-    </properties>
-
-
+    <artifactId>web-api</artifactId>
+    <packaging>jar</packaging>
 
 </project>
