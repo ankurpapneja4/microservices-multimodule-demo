@@ -19,6 +19,7 @@
 
     <modules>
         <module>microservices</module>
+        <module>shared-modules</module>
     </modules>
 
     <properties>
