@@ -7,14 +7,10 @@
 
     <parent>
         <groupId>com.example</groupId>
-        <artifactId>microservices-multimodule-demo</artifactId>
+        <artifactId>microservices</artifactId>
         <version>${revision}</version>
     </parent>
-    <artifactId>microservices</artifactId>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>customer</module>
-    </modules>
+    <artifactId>customer</artifactId>
+    <packaging>jar</packaging>
 
 </project>
