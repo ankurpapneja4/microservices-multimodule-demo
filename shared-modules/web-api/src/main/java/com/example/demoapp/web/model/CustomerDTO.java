@@ -1,3 +1,5 @@
+package com.example.demoapp.web.model;
+
 import lombok.*;
 
 @Data
