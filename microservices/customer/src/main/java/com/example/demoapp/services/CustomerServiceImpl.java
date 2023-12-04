@@ -43,5 +43,10 @@ public class CustomerServiceImpl implements CustomerService {
             log.debug( "Updating Customer" );
     }
 
+    @Override
+    public void deleteCustomer(UUID customerID) {
+            log.debug( "Deleting Customer" );
+    }
+
 
 }
