@@ -21,9 +21,14 @@
 
         <dependency>
             <groupId>com.example</groupId>
-            <artifactId>shared-modules</artifactId>
+            <artifactId>mappers</artifactId>
             <version>${project.version}</version>
-            <type>pom</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>clients</artifactId>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
