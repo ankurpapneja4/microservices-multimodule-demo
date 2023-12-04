@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.example</groupId>
         <artifactId>shared-modules</artifactId>
-        <version>${revision}</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>clients</artifactId>

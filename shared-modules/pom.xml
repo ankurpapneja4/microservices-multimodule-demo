@@ -8,7 +8,7 @@
     <parent>
         <groupId>com.example</groupId>
         <artifactId>microservices-multimodule-demo</artifactId>
-        <version>${revision}</version>
+        <version>1.0.0</version>
     </parent>
     <artifactId>shared-modules</artifactId>
     <packaging>pom</packaging>
