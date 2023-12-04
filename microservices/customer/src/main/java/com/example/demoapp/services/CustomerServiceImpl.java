@@ -24,4 +24,17 @@ public class CustomerServiceImpl implements CustomerService {
                             .build()
                 );
     }
+
+    @Override
+    public UUID saveNewCustomer(CustomerDTO customerDTO) {
+
+        // Get Customer
+        Customer customer = CustomerDTOMapper.INSTANCE.customerDtoToCustomer( customerDTO );
+
+        // Save Customer - Mock Implementation
+        customer.setId( UUID.randomUUID() );
+
+        // Return Customer Id
+        return customer.getId();
+    }
 }
