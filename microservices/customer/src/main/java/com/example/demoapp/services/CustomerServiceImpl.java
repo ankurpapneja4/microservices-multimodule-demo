@@ -37,4 +37,11 @@ public class CustomerServiceImpl implements CustomerService {
         // Return Customer Id
         return customer.getId();
     }
+
+    @Override
+    public void updateCustomer(UUID customerId, CustomerDTO customerDTO) {
+            log.debug( "Updating Customer" );
+    }
+
+
 }

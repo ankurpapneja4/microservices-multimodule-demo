@@ -35,4 +35,14 @@ public class CustomerController {
         return  new ResponseEntity( headers, HttpStatus.CREATED );
 
     }
+
+    @PutMapping("/{customerId}")
+    public ResponseEntity updateCustomer( @PathVariable("customerId") UUID customerId, @RequestBody CustomerDTO customerDTO ){
+
+        customerService.updateCustomer( customerId, customerDTO );
+
+        return ResponseEntity.noContent().build();
+
+    }
+
 }
