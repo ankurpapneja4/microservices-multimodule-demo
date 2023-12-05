@@ -15,6 +15,7 @@
 
     <modules>
         <module>customer</module>
+        <module>beer-microservice</module>
     </modules>
 
     <dependencies>
