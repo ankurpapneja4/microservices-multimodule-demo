@@ -1,4 +1,4 @@
-package com.example.demoapp.controller;
+package com.example.demoapp.web.controller;
 
 import com.example.demoapp.web.model.BeerDTO;
 import org.springframework.http.HttpStatus;
