@@ -23,6 +23,8 @@ public final class BeerServiceClient {
 
     public BeerDTO getBeerById(UUID beerId){
 
-        return restTemplate.getForObject( apihost + V1_BEER_PATH + beerId , BeerDTO.class );
+        String url = beerServiceConfigurationProperties.absoluteServiceURL() + UUID.randomUUID();
+
+        return  restTemplate.getForObject( url, BeerDTO.class );
     }
 }
