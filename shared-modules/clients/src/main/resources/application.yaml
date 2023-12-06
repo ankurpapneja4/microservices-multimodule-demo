@@ -1,0 +1,4 @@
+microservices:
+  beer-microservice:
+    config:
+      apihost: http://localhost:8080
