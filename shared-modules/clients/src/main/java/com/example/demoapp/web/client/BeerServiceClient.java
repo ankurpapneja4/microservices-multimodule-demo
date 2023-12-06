@@ -13,17 +13,17 @@ import java.util.UUID;
 @Slf4j
 public final class BeerServiceClient {
 
-    private final BeerServiceConfigurationProperties beerServiceConfigurationProperties;
+    private final BeerServiceConfigurationProperties config;
     private final RestTemplate restTemplate;
 
-    public BeerServiceClient(BeerServiceConfigurationProperties properties, RestTemplateBuilder restTemplateBuilder){
+    public BeerServiceClient(BeerServiceConfigurationProperties config, RestTemplateBuilder restTemplateBuilder){
         this.restTemplate = restTemplateBuilder.build();
-        this.beerServiceConfigurationProperties = properties;
+        this.config = config;
     }
 
     public BeerDTO getBeerById(UUID beerId){
 
-        String url = beerServiceConfigurationProperties.absoluteServiceURL() + UUID.randomUUID();
+        String url = config.absoluteServiceURL() + UUID.randomUUID();
 
         return  restTemplate.getForObject( url, BeerDTO.class );
     }
