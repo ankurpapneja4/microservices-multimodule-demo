@@ -30,6 +30,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>web-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
     </dependencies>
 
 
