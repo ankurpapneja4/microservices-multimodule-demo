@@ -34,4 +34,18 @@ class BeerServiceClientTest {
 
         assertNotNull( uri );
     }
+
+    @Test
+    void testUpdateBeer(){
+
+        BeerDTO beerDTO = BeerDTO.builder().beerName("Updated Name").build();
+        beerServiceClient.updateBeer( UUID.randomUUID(), beerDTO);
+    }
+
+
+    @Test
+    void testDeleteBeer() {
+
+        beerServiceClient.deleteBeer( UUID.randomUUID() );
+    }
 }

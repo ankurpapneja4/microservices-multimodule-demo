@@ -38,4 +38,12 @@ public final class BeerServiceClient {
 
     }
 
+    public void updateBeer( UUID beerId, BeerDTO beerDTO){
+            String requestURL = config.absoluteServiceURL() + beerId.toString();
+            restTemplate.put( requestURL, beerDTO ); }
+
+    public void deleteBeer( UUID beerId ){
+            String requestURL = config.absoluteServiceURL() + beerId.toString();
+            restTemplate.delete( requestURL ); }
+
 }
