@@ -1,0 +1,6 @@
+microservices:
+  beer-microservice:
+    config:
+      hostname: localhost
+      port: 8080
+      servicePath: "/api/v1/beer"
