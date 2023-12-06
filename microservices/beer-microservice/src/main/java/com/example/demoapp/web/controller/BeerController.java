@@ -4,6 +4,7 @@ import com.example.demoapp.web.model.BeerDTO;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
 import java.util.UUID;
@@ -19,13 +20,20 @@ public class BeerController {
         return ResponseEntity.ok( BeerDTO.builder().build() );
     }
 
-    @PostMapping
-    public ResponseEntity saveNewBeer( @RequestBody BeerDTO beerDTO ){
+    @PostMapping("/")
+    public ResponseEntity saveNewBeer( @RequestBody BeerDTO beerDTO , UriComponentsBuilder uriBuilder){
 
         //Todo - implementation
-        return ResponseEntity
-                    .created( URI.create( "/api/v1/beer/" + UUID.randomUUID().toString()) )
-                    .build();
+
+        String beerId = UUID.randomUUID().toString();
+
+        // Build absolute path
+        URI location =  uriBuilder
+                            .path("/api/v1/beer/")
+                            .path(beerId)
+                        .build().toUri();
+
+        return ResponseEntity.created( location ).build();
     }
 
     @PutMapping("/{beerId}")
