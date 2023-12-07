@@ -1,7 +1,7 @@
 package com.example.demoapp.mappers;
 
+import com.example.demoapp.domain.model.Customer;
 import com.example.demoapp.web.model.CustomerDTO;
-import com.example.demoapp.model.Customer;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

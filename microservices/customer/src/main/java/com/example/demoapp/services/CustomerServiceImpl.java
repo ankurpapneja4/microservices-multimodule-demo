@@ -1,7 +1,7 @@
 package com.example.demoapp.services;
 
+import com.example.demoapp.domain.model.Customer;
 import com.example.demoapp.mappers.CustomerDTOMapper;
-import com.example.demoapp.model.Customer;
 import com.example.demoapp.web.model.CustomerDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
