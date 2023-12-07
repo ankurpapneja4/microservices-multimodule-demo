@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>customer</module>
+        <module>customer-microservice</module>
         <module>beer-microservice</module>
     </modules>
 
