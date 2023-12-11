@@ -1,6 +1,7 @@
 package com.example.demoapp.web.controller;
 
 import com.example.demoapp.web.model.BeerDTO;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +22,7 @@ public class BeerController {
     }
 
     @PostMapping("/")
-    public ResponseEntity saveNewBeer( @RequestBody BeerDTO beerDTO , UriComponentsBuilder uriBuilder){
+    public ResponseEntity saveNewBeer( @Valid @RequestBody BeerDTO beerDTO , UriComponentsBuilder uriBuilder){
 
         //Todo - implementation
 
@@ -38,7 +39,7 @@ public class BeerController {
 
     @PutMapping("/{beerId}")
     @ResponseStatus( HttpStatus.NO_CONTENT )
-    public void updateBeer( @PathVariable UUID beerId, @RequestBody BeerDTO beerDTO ){
+    public void updateBeer( @PathVariable UUID beerId, @Valid @RequestBody BeerDTO beerDTO ){
 
         //Todo - Implementation
 
