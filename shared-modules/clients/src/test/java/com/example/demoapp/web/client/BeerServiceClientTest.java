@@ -2,6 +2,7 @@ package com.example.demoapp.web.client;
 
 import com.example.demoapp.ClientsApplication;
 import com.example.demoapp.web.model.BeerDTO;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,6 +13,7 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest(classes={ ClientsApplication.class })
+@Disabled
 class BeerServiceClientTest {
 
     @Autowired

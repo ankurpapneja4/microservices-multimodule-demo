@@ -1,9 +1,12 @@
 package com.example.demoapp.mappers;
 
+import org.springframework.stereotype.Component;
+
 import java.sql.Timestamp;
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
 
+@Component
 public class DateMapper {
 
     public OffsetDateTime toOffsetDateTime(Timestamp timestamp){
