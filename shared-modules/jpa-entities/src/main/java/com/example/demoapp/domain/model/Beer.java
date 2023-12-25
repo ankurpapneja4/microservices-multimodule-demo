@@ -6,7 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.math.BigDecimal;
-import java.time.OffsetDateTime;
+import java.sql.Timestamp;
 import java.util.UUID;
 
 @Entity
@@ -23,10 +23,10 @@ public class Beer {
 
     @CreationTimestamp
     @Column( updatable=false )
-    private OffsetDateTime createdDate;
+    private Timestamp createdDate;
 
     @UpdateTimestamp
-    private OffsetDateTime lastModifiedDate;
+    private Timestamp lastModifiedDate;
 
     private String beerName;
 
