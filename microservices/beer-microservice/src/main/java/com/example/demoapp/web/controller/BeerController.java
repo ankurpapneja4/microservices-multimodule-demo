@@ -1,47 +1,40 @@
 package com.example.demoapp.web.controller;
 
+import com.example.demoapp.services.BeerService;
 import com.example.demoapp.web.model.BeerDTO;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
 import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/beer")
+@RequiredArgsConstructor
 public class BeerController {
+
+    private final BeerService beerService;
 
     @GetMapping("/{beerId}")
     public ResponseEntity<BeerDTO> getBeerById(@PathVariable UUID beerId){
 
-        //Todo - implementation
-        return ResponseEntity.ok( BeerDTO.builder().build() );
+        return ResponseEntity.ok(
+                    beerService.getById( beerId ));
     }
 
     @PostMapping("/")
-    public ResponseEntity saveNewBeer( @Valid @RequestBody BeerDTO beerDTO , UriComponentsBuilder uriBuilder){
+    public ResponseEntity<BeerDTO> saveNewBeer( @Valid @RequestBody BeerDTO beerDTO ){
 
-        //Todo - implementation
-
-        String beerId = UUID.randomUUID().toString();
-
-        // Build absolute path
-        URI location =  uriBuilder
-                            .path("/api/v1/beer/")
-                            .path(beerId)
-                        .build().toUri();
-
-        return ResponseEntity.created( location ).build();
+        return new ResponseEntity<>( beerService.saveNewBeer( beerDTO ), HttpStatus.CREATED );
     }
 
     @PutMapping("/{beerId}")
-    @ResponseStatus( HttpStatus.NO_CONTENT )
-    public void updateBeer( @PathVariable UUID beerId, @Valid @RequestBody BeerDTO beerDTO ){
+    public ResponseEntity<BeerDTO> updateBeer( @PathVariable UUID beerId, @Valid @RequestBody BeerDTO beerDTO ){
 
-        //Todo - Implementation
+        return new ResponseEntity<>(
+                beerService.updateBeer( beerId, beerDTO), HttpStatus.NO_CONTENT);
 
     }
 
